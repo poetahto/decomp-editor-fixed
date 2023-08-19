@@ -3,6 +3,7 @@ package me.disturbo.types;
 import me.disturbo.main.MainActivity;
 import me.disturbo.data.DataManager;
 
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -44,7 +45,13 @@ public class Trainer {
         String partyFlags = values.get("partyFlags"),
                partySize = values.get("partySize"),
                partyName = Party.extractPartyName(values.get("party"));
-        party = DataManager.loadParty(partyFlags, partySize, partyName);
+        try {
+            party = DataManager.loadParty(partyFlags, partySize, partyName);
+        }
+        catch (Exception e)
+        {
+            System.out.println("messed up.");
+        }
     }
 
     public static final HashMap<String, String> templateValues(){
