@@ -27,7 +27,17 @@ public class Party extends LinkedList<PartyMember> {
     }
 
     final String buildPartyName(){
-        return "{." + getPartyType().substring("TrainerMon".length()) + " = " + name + "}";
+        return getPartyId() + "(" + name + ")";
+    }
+
+    public final String getPartyId(){
+        String partyType = "";
+        if(!partyHasCustomItems()) partyType += "NO_";
+        partyType += "ITEM_";
+        if(!partyHasCustomMoves()) partyType += "DEFAULT_";
+        else partyType += "CUSTOM_";
+        partyType += "MOVES";
+        return partyType;
     }
 
     public final String getPartyType(){

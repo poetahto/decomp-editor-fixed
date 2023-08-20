@@ -139,7 +139,7 @@ public class Trainer {
         struct += "        .items = " + buildTrainerItems() + "," + System.lineSeparator();
         struct += "        .doubleBattle = " + buildDoubleBattle() + "," + System.lineSeparator();
         struct += "        .aiFlags = " + buildAiFlags() + "," + System.lineSeparator();
-        struct += "        .partySize = " + party.size + "," + System.lineSeparator();
+//        struct += "        .partySize = " + party.size + "," + System.lineSeparator();
         struct += "        .party = " + party.buildPartyName() + "," + System.lineSeparator();
         struct += "    }," + System.lineSeparator() + System.lineSeparator();
         return struct;
