@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="Decomp Trainer Editor.jar">
+  <artifact type="jar" build-on-make="true" name="Decomp Trainer Editor.jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Decomp_Trainer_Editor</output-path>
     <root id="archive" name="Decomp Trainer Editor.jar">
       <element id="module-output" name="Decomp Trainer Editor" />
