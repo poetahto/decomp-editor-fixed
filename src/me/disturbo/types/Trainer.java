@@ -131,7 +131,7 @@ public class Trainer {
     public final String buildTrainerStruct(){
         String struct = "    [" + name + "] =" + System.lineSeparator();
         struct += "    {" + System.lineSeparator();
-        struct += "        .partyFlags = " + party.getPartyFlags() + "," + System.lineSeparator();
+//        struct += "        .partyFlags = " + party.getPartyFlags() + "," + System.lineSeparator();
         struct += "        .trainerClass = " + trainerClass + "," + System.lineSeparator();
         struct += "        .encounterMusic_gender = " + buildMusicGender() + "," + System.lineSeparator();
         struct += "        .trainerPic = " + trainerPic + "," + System.lineSeparator();
