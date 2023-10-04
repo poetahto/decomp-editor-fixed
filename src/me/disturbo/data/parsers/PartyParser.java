@@ -16,8 +16,8 @@ public class PartyParser implements IndexedLineParser<Party> {
 
     @Override
     public Party parseObject(String name, String rawParty) {
-        String partyType = rawParty.substring(rawParty.indexOf("TrainerMon"), rawParty.indexOf("Moves") + "Moves".length());
-        String partyDeclaration = "staticconststruct" + partyType + name + "[]={{";
+//        String partyType = rawParty.substring(rawParty.indexOf("TrainerMon"), rawParty.indexOf("Moves") + "Moves".length());
+        String partyDeclaration = "staticconststructTrainerMon" + name + "[]={{";
         rawParty = rawParty.replaceAll(System.lineSeparator(), "").replaceAll("\\s+(?=([^\"]*\"[^\"]*\")*[^\"]*$)", "");
         rawParty = rawParty.substring(partyDeclaration.length(), rawParty.length() - 3);
 

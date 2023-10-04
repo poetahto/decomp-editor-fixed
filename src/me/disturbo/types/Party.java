@@ -27,7 +27,7 @@ public class Party extends LinkedList<PartyMember> {
     }
 
     final String buildPartyName(){
-        return getPartyId() + "(" + name + ")";
+        return "TRAINER_PARTY(" + name + ")";
     }
 
     public final String getPartyId(){
@@ -76,7 +76,7 @@ public class Party extends LinkedList<PartyMember> {
     }
 
     public final String buildPartyStruct(){
-        String struct = "static const struct " + getPartyType() + " " + name + "[] = {" + System.lineSeparator();
+        String struct = "static const struct TrainerMon " + name + "[] = {" + System.lineSeparator();
         for(int index = 0; index < size(); index++){
             struct += get(index).buildMemberStruct(partyHasCustomItems(), partyHasCustomMoves());
             if(index < size() - 1) struct += ",";

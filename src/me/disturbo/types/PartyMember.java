@@ -74,7 +74,10 @@ public class PartyMember {
 
     public final String buildMemberStruct(boolean partyHasCustomItems, boolean partyHasCustomMoves){
         String struct = "    {" + System.lineSeparator();
-        struct += "    .iv = " + iv + "," + System.lineSeparator();
+
+        if (!iv.isEmpty())
+            struct += "    .iv = " + iv + "," + System.lineSeparator();
+
         struct += "    .lvl = " + level + "," + System.lineSeparator();
         String speciesBuild = "    .species = " + this.species;
         String heldItemBuild = "    .heldItem = " + this.heldItem;

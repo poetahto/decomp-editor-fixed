@@ -75,7 +75,7 @@ public class PartyMemberPanel extends JPanel{
 
 
         iv = new JTextField();
-        iv.setDocument(new TextFieldLimiter(-1, 256));
+//        iv.setDocument(new TextFieldLimiter(-1, 256));
         cons.gridy++; panel.add(iv, cons);
 
         cons.gridy++; panel.add(Box.createVerticalStrut(10), cons);
